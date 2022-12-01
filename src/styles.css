@@ -1,1 +1,236 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+
+/*
+https://colorhunt.co/palette/280b4561105ec84771ffe98a
+https://colorhunt.co/palette/fbfacddebaceba94d17f669d
+*/
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Comfortaa;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu-container {
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  height: 70px;
+  left: 30px;
+  top: 20px;
+  transition: all 0.3s;
+}
+.menu-container.full-menu {
+  border-radius: 0;
+  padding: 0 !important;
+  position: aboslute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.full-menu .menu {
+  top: 30px;
+  left: 30px;
+}
+
+.menu {
+  font-size: 2.2em;
+  position: absolute;
+
+  z-index: 100;
+  transition: all 0.3s;
+}
+.menu i {
+  opacity: 0.8;
+  transform: scale(1);
+  transition: all 0.3s;
+  z-index: 2;
+}
+.menu i:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 1;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+}
+.overlay.open {
+  opacity: 0.9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+.overlay nav {
+  font-size: 2em;
+  text-align: center !important;
+  position: relative;
+  top: 30%;
+  height: 60%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  text-align: left;
+  margin: 10%;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 50%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.overlay ul li a:hover,
+.overlay ul li a:focus,
+.overlay ul li a:active {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@media all and (max-width: 980px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+.darkMode {
+  background-color: #39065a;
+  color: white;
+  transition: all 0.6s;
+}
+.darkMode a {
+  color: white;
+}
+.darkMode .menu-container.full-menu {
+  background-color: #6a0572;
+}
+
+.lightMode {
+  background-color: #debace;
+  color: black;
+  transition: all 0.6s;
+}
+.lightMode a {
+  color: black;
+}
+
+.lightMode .menu-container.full-menu {
+  background-color: #7f669d;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h3 {
+  font-weight: bold;
+}
+.title h1 {
+  font-size: 2.5rem;
+  padding: 40px 0 0 40px;
+}
+.darkMode.cd-timeline::before {
+  background: #7e57c2;
+}
+.lightMode.cd-timeline::before {
+  background: #473c44;
+}
+
+.darkMode.cd-timeline-content {
+  background: #2d0f40;
+}
+.lightMode.cd-timeline-content {
+  background: #947c8d;
+}
+.darkMode.timeline-content-info {
+  background: #40145c;
+}
+.lightMode.timeline-content-info {
+  background: #4a4047;
+  color: white;
+}
+.darkMode.cd-timeline-content .content-skills li {
+  background: #40145c;
+}
+.lightMode.cd-timeline-content .content-skills li {
+  background: #4a4047;
+  color: white;
+}
+.darkMode.cd-timeline-img {
+  box-shadow: 0 0 0 4px #7e57c2, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.lightMode.cd-timeline-img {
+  box-shadow: 0 0 0 4px #473c44, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.darkMode.cd-timeline-img {
+  background: #673ab7;
+}
+.lightMode.cd-timeline-img {
+  background: #947c8d;
+}

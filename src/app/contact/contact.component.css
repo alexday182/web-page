@@ -1,0 +1,33 @@
+.container {
+  padding: 50px;
+}
+.darkMode.container {
+  background-color: #2d0f40;
+}
+.lightMode.container {
+  background-color: #947c8d;
+}
+.info {
+  font-size: 1em;
+}
+.info div {
+  padding: 10px;
+}
+
+.info label {
+  padding-left: 30px;
+}
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: solid 2px red;
+}
+.icon {
+  padding: 20px;
+  border-radius: 50%;
+}
+.darkMode.icon {
+  background-color: #2d0f40;
+}
+.lightMode.icon {
+  background-color: #947c8d;
+}

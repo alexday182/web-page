@@ -1,0 +1,36 @@
+<br />
+<br />
+<br />
+<br />
+<h1>Experience</h1>
+<div class="darkMode cd-timeline cd-container">
+  <div class="cd-timeline-block" *ngFor="let job of jobs">
+    <div class="darkMode cd-timeline-img cd-picture"></div>
+
+    <div class="darkMode cd-timeline-content">
+      <h2>{{ job.company }}</h2>
+      <div class="darkMode timeline-content-info">
+        <span class="timeline-content-info-title">
+          <i class="fa fa-code-fork" aria-hidden="true"></i>
+
+          {{ job.role }}
+        </span>
+        <span class="timeline-content-info-date">
+          <i class="fa fa-calendar-o" aria-hidden="true"></i>
+          {{ job.startDate | date: "LL/yyyy" }} -
+          {{ !job.current ? (job.endDate | date: "LL/yyyy") : "Present" }}
+        </span>
+      </div>
+      <p>
+        {{ job.description }}
+      </p>
+      <ul class="content-skills">
+        <li *ngFor="let tech of job.technologies | orderBy: 'asc'">
+          {{ tech }}
+        </li>
+      </ul>
+    </div>
+    <!-- cd-timeline-content -->
+  </div>
+</div>
+<!-- cd-timeline -->

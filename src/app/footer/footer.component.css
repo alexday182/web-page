@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  height: 70px;
+  padding: 15px 0px;
+}
+p {
+  font-size: 0.8em;
+}
+.darkMode.footer {
+  background-color: #280b45;
+}
+.lightMode.footer {
+  background-color: #ba94d1;
+}

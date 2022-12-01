@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="logo">
+    <div><a routerLink="/">MG.</a></div>
+  </div>
+  <div class="menu-container" id="toggle" #toggle>
+    <a class="menu" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars" aria-hidden="true" #icon></i>
+    </a>
+  </div>
+
+  <div class="overlay" id="overlay" #overlay>
+    <nav class="overlay-menu" #overlayMenu>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About Me</a></li>
+        <li><a routerLink="/experience">Experience</a></li>
+        <!--<li><a routerLink="/examples">Examples</a></li>-->
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
