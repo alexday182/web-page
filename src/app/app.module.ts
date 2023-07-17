@@ -15,6 +15,8 @@ import { ExamplesComponent } from './examples/examples.component';
 import { OrderByPipe } from './shared/order-by.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,14 @@ import { HttpClientModule } from '@angular/common/http';
     ExamplesComponent,
     OrderByPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    GridModule,
+    BrowserAnimationsModule,
+  ],
   providers: [LightDarkModeService],
   bootstrap: [AppComponent],
 })
